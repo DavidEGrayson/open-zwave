@@ -76,21 +76,15 @@ typedef union
 #pragma warning( disable : 4324 )
 #endif
 
-#ifdef _WIN64
-__declspec(align(16))
-#endif 
 typedef struct
 {   uint32_t ks[KS_LENGTH];
     aes_inf inf;
-} aes_encrypt_ctx;
+} __attribute__((aligned(16))) aes_encrypt_ctx;
 
-#ifdef _WIN64
-__declspec(align(16))
-#endif 
 typedef struct
 {   uint32_t ks[KS_LENGTH];
     aes_inf inf;
-} aes_decrypt_ctx;
+} __attribute__((aligned(16))) aes_decrypt_ctx;
 
 #ifdef _MSC_VER
 #pragma warning( default : 4324 )
