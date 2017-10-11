@@ -80,12 +80,12 @@ LogImpl::LogImpl
 	LogLevel const _queueLevel,
 	LogLevel const _dumpTrigger
 ):
-	m_filename( _filename ),					// name of log file
-	m_bAppendLog( _bAppendLog ),				// true to append (and not overwrite) any existing log
-	m_bConsoleOutput( _bConsoleOutput ),		// true to provide a copy of output to console
-	m_saveLevel( _saveLevel ),					// level of messages to log to file
-	m_queueLevel( _queueLevel ),				// level of messages to log to queue
-	m_dumpTrigger( _dumpTrigger )				// dump queued messages when this level is seen
+	m_filename( _filename ),
+	m_bConsoleOutput( _bConsoleOutput ),
+        m_bAppendLog( _bAppendLog ),
+	m_saveLevel( _saveLevel ),
+	m_queueLevel( _queueLevel ),
+	m_dumpTrigger( _dumpTrigger )
 {
 	string accessType;
 
