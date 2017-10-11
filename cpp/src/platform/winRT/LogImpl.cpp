@@ -31,7 +31,7 @@
 #include "Defs.h"
 #include "LogImpl.h"
 
-#ifdef MINGW
+#ifdef __MINGW32__
 
 #define vsprintf_s vsnprintf
 

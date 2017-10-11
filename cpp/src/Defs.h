@@ -35,7 +35,7 @@
 
 
 // Compilation export flags
-#if (defined _WINDOWS || defined WIN32 || defined _MSC_VER) && !defined MINGW
+#if (defined _WINDOWS || defined WIN32 || defined _MSC_VER) && !defined __MINGW32__
 #	if defined OPENZWAVE_MAKEDLL	// Create the dynamic library.
 #		define OPENZWAVE_EXPORT    __declspec(dllexport)
 #	elif defined OPENZWAVE_USEDLL	// Use the dynamic library
@@ -192,7 +192,7 @@ namespace OpenZWave
 #endif
 
 // Modifications for MiNGW32 compiler
-#ifdef MINGW
+#ifdef __MINGW32__
 
 // Replace "safe" versions of sprintf
 #define sprintf_s snprintf
