@@ -70,6 +70,7 @@
 #define NULL 0
 
 // Basic types
+// TODO: get rid of this junk, use stdint.h
 typedef signed char			int8;
 typedef unsigned char		uint8;
 
