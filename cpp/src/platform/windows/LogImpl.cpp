@@ -344,7 +344,7 @@ string LogImpl::GetThreadId
 {
 	char buf[20];
 	DWORD dwThread = ::GetCurrentThreadId();
-	sprintf_s( buf, sizeof(buf), "%04d ", dwThread );
+	sprintf_s( buf, sizeof(buf), "%04ld ", dwThread );
 	string str = buf;
 	return str;
 }
