@@ -29,7 +29,7 @@
 //	along with OpenZWave.  If not, see <http://www.gnu.org/licenses/>.
 //
 //-----------------------------------------------------------------------------
-#include "Windows.h"
+#include <windows.h>
 #include "Options.h"
 #include "Manager.h"
 #include "Driver.h"
